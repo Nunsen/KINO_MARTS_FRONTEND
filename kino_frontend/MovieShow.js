@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("🚀 MovieShow.js er indlæst!");
 
-    fetch("http://localhost:8080/api/movieshows")
+    //ændret URL for at bruge den deployede backend i Azure
+    fetch("https://kinomarts-hef4bpg5acfya7fb.northeurope-01.azurewebsites.net/api/movieshows")
         .then(response => response.json())
         .then(data => {
             console.log("📊 Data fra API:", data);
